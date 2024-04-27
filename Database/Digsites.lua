@@ -67,7 +67,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["1414:0.543661:0.865734"] = {
 			siteID = 323, -- Dunemaul Fossil Ridge
-			mapID = 249, -- Uldum
+			mapID = 1446, -- Tanaris
 			raceID = RaceID.ArchRaceFossil,
 		},
 		["1414:0.556432:0.863452"] = {
