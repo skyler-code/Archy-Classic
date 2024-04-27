@@ -614,7 +614,7 @@ function Archy:DebugMissingDigsites()
         end
 	end
     
-    if MissingDigsites and MissingDigsites.Count > 0 then
+    if ((MissingDigsites or {}).Count or 0) > 0 then
         print(MissingDigsites.Count .. " missing digsites found. Please run /archy debug and report the list")
     end
 end
@@ -916,7 +916,7 @@ function Archy:OnEnable()
 
 	DatamineTooltip:ClearLines()
 	DatamineTooltip:SetSpellByID(private.CRATE_SPELL_ID)
-	CRATE_USE_STRING = ("%s %s"):format(_G.ITEM_SPELL_TRIGGER_ONUSE, _G["ArchyScanTipTextLeft" .. DatamineTooltip:NumLines()]:GetText())
+	--CRATE_USE_STRING = ("%s %s"):format(_G.ITEM_SPELL_TRIGGER_ONUSE, _G["ArchyScanTipTextLeft" .. DatamineTooltip:NumLines()]:GetText())
 
 	for trackingTypeIndex = 1, C_Minimap.GetNumTrackingTypes() do
 		if (C_Minimap.GetTrackingInfo(trackingTypeIndex)) == _G.MINIMAP_TRACKING_DIGSITES then
