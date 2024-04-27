@@ -100,7 +100,7 @@ function StatusBarCellPrototype:InitializeCell()
 	self.bg = bg
 	bg:SetWidth(102)
 	bg:SetHeight(14)
-	bg:SetTexture(0, 0, 0, 0.5)
+	bg:SetColorTexture(0, 0, 0, 0.5)
 	bg:SetPoint("LEFT", self)
 
 	local fs = self:CreateFontString(nil, "OVERLAY")
