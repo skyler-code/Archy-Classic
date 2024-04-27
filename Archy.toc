@@ -6,7 +6,7 @@
 ## Notes: Archaeology assistant
 ## Notes-zhCN: 考古学助手
 ## Notes-zhTW: 考古學助手
-## Author: Torhal, javier_himura
+## Author: Torhal, javier_himura, Brues
 ## X-Credits: daihenka, Dridzt
 ## X-Category: Archaeology
 ## SavedVariables: ArchyDB, TargetLogData, MissingDigsites
