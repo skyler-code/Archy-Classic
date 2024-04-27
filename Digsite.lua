@@ -40,7 +40,7 @@ local function MapIcon_OnEnter(self)
 		return
 	end
 	_G.GameTooltip:SetOwner(self, "ANCHOR_BOTTOMLEFT")
-	_G.GameTooltip:SetText(self.tooltip, _G.NORMAL_FONT_COLOR[1], _G.NORMAL_FONT_COLOR[2], _G.NORMAL_FONT_COLOR[3], 1)
+	_G.GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR:GetRGBA())
 end
 
 local function MapIcon_OnLeave(self)

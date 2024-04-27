@@ -793,7 +793,7 @@ function Archy:ShowDigSiteChildFrameSiteButtonTooltip(siteButton)
 	end
 
 	_G.GameTooltip:SetOwner(siteButton, "ANCHOR_BOTTOMRIGHT")
-	_G.GameTooltip:SetText(siteButton.tooltip, _G.NORMAL_FONT_COLOR[1], _G.NORMAL_FONT_COLOR[2], _G.NORMAL_FONT_COLOR[3], 1, true)
+	_G.GameTooltip:SetText(siteButton.tooltip, _G.NORMAL_FONT_COLOR:GetRGBA(), true)
 end
 
 function Archy:ResizeDigSiteDisplay()

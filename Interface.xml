@@ -91,7 +91,7 @@
         <Scripts>
             <OnEnter>
                 GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT")
-                GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR[1], NORMAL_FONT_COLOR[2], NORMAL_FONT_COLOR[3], 1, true)
+                GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR:GetRGBA(), true)
             </OnEnter>
             <OnLeave>
                 GameTooltip:Hide()
@@ -145,11 +145,11 @@
             <OnClick>
                 Archy:SocketClicked(self, button, down)
                 GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR[1], NORMAL_FONT_COLOR[2], NORMAL_FONT_COLOR[3], 1, true);
+                GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR:GetRGBA(), true);
             </OnClick>
             <OnEnter>
                 GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR[1], NORMAL_FONT_COLOR[2], NORMAL_FONT_COLOR[3], 1, true);
+                GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR:GetRGBA(), true);
             </OnEnter>
             <OnLeave>
                 GameTooltip:Hide();
@@ -527,7 +527,7 @@
                     <OnEnter>
                         if self.tooltip then
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR[1], NORMAL_FONT_COLOR[2], NORMAL_FONT_COLOR[3], 1, true);
+                        GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR:GetRGBA(), true);
                         end
                     </OnEnter>
                     <OnLeave>
@@ -613,7 +613,7 @@
                     <OnEnter>
                         if self.tooltip then
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR[1], NORMAL_FONT_COLOR[2], NORMAL_FONT_COLOR[3], 1, true);
+                        GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR:GetRGBA(), 1, true);
                         end
                     </OnEnter>
                     <OnLeave>
@@ -639,7 +639,7 @@
                     <OnEnter>
                         if self.tooltip then
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR[1], NORMAL_FONT_COLOR[2], NORMAL_FONT_COLOR[3], 1, true);
+                        GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR:GetRGBA(), true);
                         end
                     </OnEnter>
                     <OnLeave>
@@ -665,7 +665,7 @@
                     <OnEnter>
                         if self.tooltip then
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR[1], NORMAL_FONT_COLOR[2], NORMAL_FONT_COLOR[3], 1, true);
+                        GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR:GetRGBA(), true);
                         end
                     </OnEnter>
                     <OnLeave>
@@ -1175,7 +1175,7 @@
                     <OnEnter>
                         if self.tooltip then
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR[1], NORMAL_FONT_COLOR[2], NORMAL_FONT_COLOR[3], 1, true);
+                        GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR:GetRGBA(), true);
                         end
                     </OnEnter>
                     <OnLeave>
@@ -1256,7 +1256,7 @@
                     <OnEnter>
                         if self.tooltip then
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR[1], NORMAL_FONT_COLOR[2], NORMAL_FONT_COLOR[3], 1, true);
+                        GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR:GetRGBA(), true);
                         end
                     </OnEnter>
                     <OnLeave>
@@ -1283,7 +1283,7 @@
                     <OnEnter>
                         if self.tooltip then
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR[1], NORMAL_FONT_COLOR[2], NORMAL_FONT_COLOR[3], 1, true);
+                        GameTooltip:SetText(self.tooltip, NORMAL_FONT_COLOR:GetRGBA(), true);
                         end
                     </OnEnter>
                     <OnLeave>
