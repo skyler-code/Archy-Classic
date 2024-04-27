@@ -24,7 +24,7 @@ local HereBeDragons = LibStub("HereBeDragons-2.0")
 -- ----------------------------------------------------------------------------
 -- Constants.
 -- ----------------------------------------------------------------------------
-local NUM_DIGSITE_FINDS_DEFAULT = 6
+local NUM_DIGSITE_FINDS_DEFAULT = 3
 local NUM_DIGSITE_FINDS_DRAENOR = 9
 
 -- ----------------------------------------------------------------------------
@@ -953,7 +953,7 @@ function Archy:RefreshDigSiteDisplay()
 		return
 	end
 
-	local maxFindCount = (continentID >= DRAENOR_CONTINENTID) and NUM_DIGSITE_FINDS_DRAENOR or NUM_DIGSITE_FINDS_DEFAULT
+	local maxFindCount = NUM_DIGSITE_FINDS_DEFAULT
 
 	for index = 1, #DigSiteFrame.children do
 		DigSiteFrame.children[index]:Hide()
