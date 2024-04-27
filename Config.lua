@@ -921,6 +921,7 @@ local function GetDigSiteOptions()
 							get = function()
 								return digsiteSettings.displayProgressBar
 							end,
+							disabled = true,
 							set = function(_, value)
 								digsiteSettings.displayProgressBar = value
 
