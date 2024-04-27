@@ -18,7 +18,7 @@ local WaypoingHandler = {
 	-- ----------------------------------------------------------------------------
 	-- Methods.
 	-- ----------------------------------------------------------------------------
-	ClearWaypoint = function(self, force)
+	ClearWaypoint = C_Map.GetUserWaypoint and function(self, force)
         if not private.ProfileSettings.general.show or not private.ProfileSettings.digsite.announceNearest then
             return false
         end
@@ -52,7 +52,7 @@ local WaypoingHandler = {
         end
 
         return false
-	end,
+	end or function() end,
 	Refresh = function(self, digsite, force)
         if force then
             self.currentDigsite = nil
