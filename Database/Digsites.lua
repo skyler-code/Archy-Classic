@@ -953,6 +953,7 @@ function private.InitializeDigsiteTemplates()
 		[1414] =
 		{
 			[RaceID.ArchRaceDwarf] = 0,
+			[RaceID.ArchRaceFossil] = 0,
 			[RaceID.ArchRaceNightElf] = 0,
 			[RaceID.ArchRaceTroll] = 0,
 			[RaceID.ArchRaceTolvir] = 0,
@@ -961,9 +962,10 @@ function private.InitializeDigsiteTemplates()
 		[1415] =
 		{
 			[RaceID.ArchRaceDwarf] = 0,
+			[RaceID.ArchRaceFossil] = 0,
+			[RaceID.ArchRaceNerubian] = 0,
 			[RaceID.ArchRaceNightElf] = 0,
 			[RaceID.ArchRaceTroll] = 0,
-			[RaceID.ArchRaceNerubian] = 0,
 		},
 		-- Outland
 		[1945] =
