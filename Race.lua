@@ -48,6 +48,7 @@ local KeystoneIDToRace = {} -- Populated in InitializeRaces
 private.KeystoneIDToRace = KeystoneIDToRace
 
 local RaceTextureIDToRaceLabel = {
+	[462319] = "ArchRaceOther",
 	[461829] = "ArchRaceDraenei",
 	[461831] = "ArchRaceDwarf",
 	[461833] = "ArchRaceFossil",
@@ -57,32 +58,10 @@ local RaceTextureIDToRaceLabel = {
 	[461841] = "ArchRaceTroll",
 	[461843] = "ArchRaceVrykul",
 	[462321] = "ArchRaceOrc",
-	[633000] = "ArchRaceMogu",
-	[633002] = "ArchRacePandaren",
-	[839111] = "ArchRaceMantid",
-	[1030616] = "ArchRaceArakkoa",
-	[1030617] = "ArchRaceDraenorOrc",
-	[1030618] = "ArchRaceOgre",
-	[1445573] = "ArchRaceDemons",
-	[1445575] = "ArchRaceHighborneNightElves",
-	[1445577] = "ArchRaceHighmountainTauren",
-	[2060051] = "ArchRaceZandalari",
-	[2060049] = "ArchRaceDrust",
 }
 
 local RaceIDToRaceLabel = {
 	[0] = "ArchRaceUnknown",
-	[1] = "ArchRaceDrust",
-	[2] = "ArchRaceZandalari",
-	[3] = "ArchRaceDemons",
-	[4] = "ArchRaceHighmountainTauren",
-	[5] = "ArchRaceHighborneNightElves",
-	[6] = "ArchRaceOgre",
-	[7] = "ArchRaceDraenorOrc",
-	[8] = "ArchRaceArakkoa",
-	[9] = "ArchRaceMogu",
-	[10] = "ArchRacePandaren",
-	[11] = "ArchRaceMantid",
 	[12] = "ArchRaceVrykul",
 	[13] = "ArchRaceTroll",
 	[14] = "ArchRaceTolvir",
@@ -124,26 +103,15 @@ function private.InitializeRaces()
 		keystonesInInventory = 0,
 	}, raceMetatable)
 
-	CurrencyNameFromRaceID[RaceID.ArchRaceArakkoa] = C_CurrencyInfo.GetCurrencyInfo(829).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceDemons] = C_CurrencyInfo.GetCurrencyInfo(1174).quantity
 	CurrencyNameFromRaceID[RaceID.ArchRaceDraenei] = C_CurrencyInfo.GetCurrencyInfo(398).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceDraenorOrc] = C_CurrencyInfo.GetCurrencyInfo(821).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceDrust] = C_CurrencyInfo.GetCurrencyInfo(1535).quantity
 	CurrencyNameFromRaceID[RaceID.ArchRaceDwarf] = C_CurrencyInfo.GetCurrencyInfo(384).quantity
 	CurrencyNameFromRaceID[RaceID.ArchRaceFossil] = C_CurrencyInfo.GetCurrencyInfo(393).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceHighborneNightElves] = C_CurrencyInfo.GetCurrencyInfo(1172).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceHighmountainTauren] = C_CurrencyInfo.GetCurrencyInfo(1173).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceMantid] = C_CurrencyInfo.GetCurrencyInfo(754).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceMogu] = C_CurrencyInfo.GetCurrencyInfo(677).quantity
 	CurrencyNameFromRaceID[RaceID.ArchRaceNightElf] = C_CurrencyInfo.GetCurrencyInfo(394).quantity
 	CurrencyNameFromRaceID[RaceID.ArchRaceNerubian] = C_CurrencyInfo.GetCurrencyInfo(400).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceOgre] = C_CurrencyInfo.GetCurrencyInfo(828).quantity
 	CurrencyNameFromRaceID[RaceID.ArchRaceOrc] = C_CurrencyInfo.GetCurrencyInfo(397).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRacePandaren] = C_CurrencyInfo.GetCurrencyInfo(676).quantity
 	CurrencyNameFromRaceID[RaceID.ArchRaceTolvir] = C_CurrencyInfo.GetCurrencyInfo(401).quantity
 	CurrencyNameFromRaceID[RaceID.ArchRaceTroll] = C_CurrencyInfo.GetCurrencyInfo(385).quantity
 	CurrencyNameFromRaceID[RaceID.ArchRaceVrykul] = C_CurrencyInfo.GetCurrencyInfo(399).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceZandalari] = C_CurrencyInfo.GetCurrencyInfo(1534).quantity
 	
 	for raceID, currencyName in pairs(CurrencyNameFromRaceID) do
 		Races[raceID].currencyName = currencyName
@@ -158,7 +126,6 @@ function private.AddRace(raceID)
 		-- TODO: Debug output
 		return
 	end
-
 	local raceName, raceTextureID, keystoneItemID, fragmentsCollected, _, maxFragments = _G.GetArchaeologyRaceInfo(raceID)
 	local raceLabel = RaceTextureIDToRaceLabel[raceTextureID]
 	local keystoneName, _, _, _, _, _, _, _, _, keystoneTexture, _ = _G.GetItemInfo(keystoneItemID)
