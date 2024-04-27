@@ -64,6 +64,7 @@ function private:ResetFramePositions()
 end
 
 function Archy:DisableProgressBar()
+	if not ArcheologyDigsiteProgressBar then return end
 	if not private.DefaultProgressBarData or not private.DefaultProgressBarData.isDisabled then
 		local bar = _G.ArcheologyDigsiteProgressBar
 		bar:UnregisterEvent("ARCHAEOLOGY_SURVEY_CAST")
@@ -88,6 +89,7 @@ function Archy:DisableProgressBar()
 end
 
 function Archy:EnableProgressBar()
+	if not ArcheologyDigsiteProgressBar then return end
 	if private.DefaultProgressBarData and private.DefaultProgressBarData.isDisabled then
 		local bar = _G.ArcheologyDigsiteProgressBar
 		bar:RegisterEvent("ARCHAEOLOGY_SURVEY_CAST")
