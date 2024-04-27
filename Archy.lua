@@ -1680,7 +1680,7 @@ function Archy:PET_BATTLE_CLOSE()
 		private.ProfileSettings.general.show = true
 
 		-- API doesn't return correct values in this event
-		if _G.C_PetBattles.IsInBattle() then
+		if _G.C_PetBattles and _G.C_PetBattles.IsInBattle() then
 			-- so let's schedule our re-show in a sec
 			self:ScheduleTimer("ConfigUpdated", 1.5)
 		else
