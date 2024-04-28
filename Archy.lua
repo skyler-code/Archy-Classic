@@ -29,8 +29,8 @@ local HereBeDragons = LibStub("HereBeDragons-2.0")
 local L = LibStub("AceLocale-3.0"):GetLocale("Archy", false)
 local LDBI = LibStub("LibDBIcon-1.0")
 
-local DatamineTooltip = _G.CreateFrame("GameTooltip", "ArchyScanTip", nil, "GameTooltipTemplate")
-DatamineTooltip:SetOwner(_G.UIParent, "ANCHOR_NONE")
+--local DatamineTooltip = _G.CreateFrame("GameTooltip", "ArchyScanTip", nil, "GameTooltipTemplate")
+--DatamineTooltip:SetOwner(_G.UIParent, "ANCHOR_NONE")
 
 -- ----------------------------------------------------------------------------
 -- Constants
@@ -914,8 +914,8 @@ function Archy:OnEnable()
 	DigSiteFrame:UpdateChrome()
 	ArtifactFrame:UpdateChrome()
 
-	DatamineTooltip:ClearLines()
-	DatamineTooltip:SetSpellByID(private.CRATE_SPELL_ID)
+	--DatamineTooltip:ClearLines()
+	--DatamineTooltip:SetSpellByID(private.CRATE_SPELL_ID)
 	--CRATE_USE_STRING = ("%s %s"):format(_G.ITEM_SPELL_TRIGGER_ONUSE, _G["ArchyScanTipTextLeft" .. DatamineTooltip:NumLines()]:GetText())
 
 	for trackingTypeIndex = 1, C_Minimap.GetNumTrackingTypes() do
