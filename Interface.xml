@@ -70,7 +70,7 @@
         <Scripts>
             <OnEnter>
                 GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT")
-                GameTooltip:AddLine(ARCHAEOLOGY_RANK_TOOLTIP, HIGHLIGHT_FONT_COLOR.r, HIGHLIGHT_FONT_COLOR.g, HIGHLIGHT_FONT_COLOR.b, 1)
+                GameTooltip:AddLine(ARCHAEOLOGY_RANK_TOOLTIP, HIGHLIGHT_FONT_COLOR:GetRGBA())
                 GameTooltip:Show()
             </OnEnter>
             <OnLeave>
@@ -734,7 +734,7 @@
                 <Scripts>
                     <OnEnter>
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:AddLine(ARCHAEOLOGY_RANK_TOOLTIP, HIGHLIGHT_FONT_COLOR.r, HIGHLIGHT_FONT_COLOR.g, HIGHLIGHT_FONT_COLOR.b, 1);
+                        GameTooltip:AddLine(ARCHAEOLOGY_RANK_TOOLTIP, HIGHLIGHT_FONT_COLOR:GetRGBA());
                         GameTooltip:Show();
                     </OnEnter>
                     <OnLeave>
@@ -808,7 +808,7 @@
                     <OnEnter>
                         if self.tooltip then
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:AddLine(self.tooltip, HIGHLIGHT_FONT_COLOR.r, HIGHLIGHT_FONT_COLOR.g, HIGHLIGHT_FONT_COLOR.b, 1);
+                        GameTooltip:AddLine(self.tooltip, HIGHLIGHT_FONT_COLOR:GetRGBA());
                         GameTooltip:Show();
                         end
                     </OnEnter>
@@ -839,7 +839,7 @@
                     <OnEnter>
                         if self.tooltip then
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:AddLine(self.tooltip, HIGHLIGHT_FONT_COLOR.r, HIGHLIGHT_FONT_COLOR.g, HIGHLIGHT_FONT_COLOR.b, 1);
+                        GameTooltip:AddLine(self.tooltip, HIGHLIGHT_FONT_COLOR:GetRGBA());
                         GameTooltip:Show();
                         end
                     </OnEnter>
@@ -869,7 +869,7 @@
                     <OnEnter>
                         if self.tooltip then
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:AddLine(self.tooltip, HIGHLIGHT_FONT_COLOR.r, HIGHLIGHT_FONT_COLOR.g, HIGHLIGHT_FONT_COLOR.b, 1);
+                        GameTooltip:AddLine(self.tooltip, HIGHLIGHT_FONT_COLOR:GetRGBA());
                         GameTooltip:Show();
                         end
                     </OnEnter>
@@ -911,7 +911,7 @@
                 <Scripts>
                     <OnEnter>
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:AddLine(ARCHAEOLOGY_RANK_TOOLTIP, HIGHLIGHT_FONT_COLOR.r, HIGHLIGHT_FONT_COLOR.g, HIGHLIGHT_FONT_COLOR.b, 1);
+                        GameTooltip:AddLine(ARCHAEOLOGY_RANK_TOOLTIP, HIGHLIGHT_FONT_COLOR:GetRGBA());
                         GameTooltip:Show();
                     </OnEnter>
                     <OnLeave>
@@ -980,7 +980,7 @@
                     <OnEnter>
                         if self.tooltip then
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:AddLine(self.tooltip, HIGHLIGHT_FONT_COLOR.r, HIGHLIGHT_FONT_COLOR.g, HIGHLIGHT_FONT_COLOR.b, 1);
+                        GameTooltip:AddLine(self.tooltip, HIGHLIGHT_FONT_COLOR:GetRGBA());
                         GameTooltip:Show();
                         end
                     </OnEnter>
@@ -1008,7 +1008,7 @@
                     <OnEnter>
                         if self.tooltip then
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:AddLine(self.tooltip, HIGHLIGHT_FONT_COLOR.r, HIGHLIGHT_FONT_COLOR.g, HIGHLIGHT_FONT_COLOR.b, 1);
+                        GameTooltip:AddLine(self.tooltip, HIGHLIGHT_FONT_COLOR:GetRGBA());
                         GameTooltip:Show();
                         end
                     </OnEnter>
@@ -1037,7 +1037,7 @@
                     <OnEnter>
                         if self.tooltip then
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:AddLine(self.tooltip, HIGHLIGHT_FONT_COLOR.r, HIGHLIGHT_FONT_COLOR.g, HIGHLIGHT_FONT_COLOR.b, 1);
+                        GameTooltip:AddLine(self.tooltip, HIGHLIGHT_FONT_COLOR:GetRGBA());
                         GameTooltip:Show();
                         end
                     </OnEnter>
@@ -1069,7 +1069,7 @@
                     <OnEnter>
                         if self.tooltip then
                         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT");
-                        GameTooltip:AddLine(self.tooltip, HIGHLIGHT_FONT_COLOR.r, HIGHLIGHT_FONT_COLOR.g, HIGHLIGHT_FONT_COLOR.b, 1);
+                        GameTooltip:AddLine(self.tooltip, HIGHLIGHT_FONT_COLOR:GetRGBA());
                         GameTooltip:Show();
                         end
                     </OnEnter>
