@@ -143,14 +143,18 @@ local function _ProcessQueue()
 end
 
 local function _RefreshDialogAnchors()
+    local default_dialog
+    for index = 1, #active_dialogs do
+        local current_dialog = active_dialogs[index]
+        if StaticPopup_IsLastDisplayedFrame(current_dialog) then
+            default_dialog = current_dialog
+        end
+    end
+
     for index = 1, #active_dialogs do
         local current_dialog = active_dialogs[index]
         current_dialog:ClearAllPoints()
-
         if index == 1 then
-
-            local default_dialog
-
             if default_dialog then
                 current_dialog:SetPoint("TOP", default_dialog, "BOTTOM", 0, 0)
             else
@@ -830,8 +834,10 @@ function lib:Spawn(reference, data)
     -- Anchor to the bottom of existing dialogs. If none exist, check to see if there are visible default StaticPopupDialogs and anchor to that instead; else, anchor to UIParent.
     if #active_dialogs > 0 then
         dialog:SetPoint("TOP", active_dialogs[#active_dialogs], "BOTTOM", 0, 0)
-    else
+    elseif StaticPopup_HasDisplayedFrames() then
         StaticPopup_SetUpPosition(dialog)
+    else
+		dialog:SetPoint("TOP", UIParent, "TOP", 0, -135);
     end
     active_dialogs[#active_dialogs + 1] = dialog
     dialog:Show()
