@@ -884,8 +884,6 @@ function Archy:OnEnable()
 	self:RegisterEvent("CHAT_MSG_LOOT")
 	self:RegisterEvent("CURRENCY_DISPLAY_UPDATE")
 	self:RegisterEvent("LOOT_OPENED")
-	self:RegisterEvent("PET_BATTLE_CLOSE")
-	self:RegisterEvent("PET_BATTLE_OPENING_START")
 	self:RegisterEvent("PLAYER_ENTERING_WORLD")
 	self:RegisterEvent("PLAYER_LEAVING_WORLD")
 	self:RegisterEvent("PLAYER_CONTROL_GAINED")
@@ -905,8 +903,12 @@ function Archy:OnEnable()
 	self:RegisterEvent("UNIT_SPELLCAST_INTERRUPTED", "UNIT_SPELLCAST_SUCCEEDED")
 	self:RegisterEvent("UNIT_SPELLCAST_STOP", "UNIT_SPELLCAST_SUCCEEDED")
 	
-	--self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
-	--self:RegisterEvent("UNIT_SPELLCAST_SENT")
+	--[[
+		self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
+		self:RegisterEvent("UNIT_SPELLCAST_SENT")
+		self:RegisterEvent("PET_BATTLE_CLOSE")
+		self:RegisterEvent("PET_BATTLE_OPENING_START")
+	]]--
 
     self:RESEARCH_ARTIFACT_HISTORY_READY()
 
