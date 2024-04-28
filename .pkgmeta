@@ -35,8 +35,6 @@ externals:
     url: https://repos.wowace.com/wow/libdatabroker-1-1
   Libs/LibDBIcon-1.0:
     url: https://repos.wowace.com/wow/libdbicon-1-0/trunk
-  Libs/LibDialog-1.0:
-    url: https://github.com/skyler-code/LibDialog-1.0.git
   Libs/LibQTip-1.0:
     url: https://repos.wowace.com/wow/libqtip-1-0
   Libs/LibSharedMedia-3.0:
