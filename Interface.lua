@@ -1015,7 +1015,7 @@ function Archy:SetFramePosition(frame)
 	elseif frame == DistanceIndicatorFrame then
 		if not profileSettings.digsite.distanceIndicator.undocked then
 			bRelativeTo = DigSiteFrame
-			bPoint, bRelativePoint, bXofs, bYofs = "CENTER", "TOPLEFT", 50, -5
+			bPoint, bRelativePoint, bXofs, bYofs = "CENTER", "TOPLEFT", 50, 0
 			frame:SetParent(DigSiteFrame)
 		else
 			frame:SetParent(_G.UIParent)
