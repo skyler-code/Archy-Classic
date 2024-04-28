@@ -102,18 +102,22 @@ function private.InitializeRaces()
 		},
 		keystonesInInventory = 0,
 	}, raceMetatable)
-
-	CurrencyNameFromRaceID[RaceID.ArchRaceDraenei] = C_CurrencyInfo.GetCurrencyInfo(398).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceDwarf] = C_CurrencyInfo.GetCurrencyInfo(384).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceFossil] = C_CurrencyInfo.GetCurrencyInfo(393).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceNightElf] = C_CurrencyInfo.GetCurrencyInfo(394).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceNerubian] = C_CurrencyInfo.GetCurrencyInfo(400).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceOrc] = C_CurrencyInfo.GetCurrencyInfo(397).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceTolvir] = C_CurrencyInfo.GetCurrencyInfo(401).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceTroll] = C_CurrencyInfo.GetCurrencyInfo(385).quantity
-	CurrencyNameFromRaceID[RaceID.ArchRaceVrykul] = C_CurrencyInfo.GetCurrencyInfo(399).quantity
 	
-	for raceID, currencyName in pairs(CurrencyNameFromRaceID) do
+	local RaceIDToCurrencyID = {
+		[RaceID.ArchRaceDraenei]  = 398,
+		[RaceID.ArchRaceDwarf]    = 384,
+		[RaceID.ArchRaceFossil]   = 393,
+		[RaceID.ArchRaceNightElf] = 394,
+		[RaceID.ArchRaceNerubian] = 400,
+		[RaceID.ArchRaceOrc] 	  = 397,
+		[RaceID.ArchRaceTolvir]   = 401,
+		[RaceID.ArchRaceTroll]    = 385,
+		[RaceID.ArchRaceVrykul]   = 399,
+	}
+	
+	for raceID, currencyID in pairs(RaceIDToCurrencyID) do
+		local currencyName = C_CurrencyInfo.GetCurrencyInfo(currencyID).name
+		CurrencyNameFromRaceID[raceID] = currencyName
 		Races[raceID].currencyName = currencyName
 	end
 
