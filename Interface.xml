@@ -269,7 +269,7 @@
                     <AbsDimension x="36" y="36"/>
                 </Size>
                 <Anchors>
-                    <Anchor point="LEFT" relativeTo="$parentCircle" relativePoint="RIGHT" x="5" y="10"/>
+                    <Anchor point="LEFT" relativeTo="$parentCircle" relativePoint="RIGHT" x="5" y="0"/>
                 </Anchors>
                 <Frames>
                     <Cooldown name="$parentCooldown" inherits="CooldownFrameTemplate" parentKey="cooldown">
