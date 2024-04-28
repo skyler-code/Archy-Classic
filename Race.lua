@@ -349,7 +349,7 @@ function Race:UpdateCurrentProject()
 
 			if not project.hasPinged and ((artifactSettings.ping and project.canSolve) or (artifactSettings.keystonePing and project.canSolveInventory)) then
 				project.hasPinged = true
-				_G.PlaySoundFile([[Interface\AddOns\Archy\Media\dingding.mp3]])
+				PlaySound(6594)
 			end
 		end
 	end

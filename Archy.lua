@@ -1565,7 +1565,7 @@ do
 		if subEvent == "SPELL_CAST_SUCCESS" and sourceGUID == private.PlayerGUID and spellID == STANDING_ON_IT_SPELL_ID then
 			self:Pour(spellDescription)
             if digsiteSettings.standingPing then
-                _G.PlaySoundFile([[Interface\AddOns\Archy\Media\dingding.mp3]])
+                PlaySound(6594)
             end
 		end
 	end
