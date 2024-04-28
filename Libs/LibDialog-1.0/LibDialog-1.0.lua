@@ -830,13 +830,7 @@ function lib:Spawn(reference, data)
     if #active_dialogs > 0 then
         dialog:SetPoint("TOP", active_dialogs[#active_dialogs], "BOTTOM", 0, 0)
     else
-        local default_dialog = _G.StaticPopup_DisplayedFrames[#_G.StaticPopup_DisplayedFrames]
-
-        if default_dialog then
-            dialog:SetPoint("TOP", default_dialog, "BOTTOM", 0, 0)
-        else
-            dialog:SetPoint("TOP", _G.UIParent, "TOP", 0, -135)
-        end
+        StaticPopup_SetUpPosition(dialog)
     end
     active_dialogs[#active_dialogs + 1] = dialog
     dialog:Show()
