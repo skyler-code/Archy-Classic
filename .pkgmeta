@@ -42,7 +42,7 @@ externals:
   Libs/LibSharedMedia-3.0:
     url: https://repos.wowace.com/wow/libsharedmedia-3-0/trunk
   Libs/LibSink-2.0:
-    url: https://repos.wowace.com/wow/libsharedmedia-3-0/trunk
+    url: https://repos.curseforge.com/wow/libsink-2-0/trunk
   Libs/LibStub:
     url: https://repos.wowace.com/wow/libstub/trunk
   Libs/LibTextDump-1.0:
