@@ -167,7 +167,7 @@ do
 
 					if isGraphicalTheme then
 						child.crest.texture:SetTexture(race.texture)
-						child.crest.tooltip = race.name .. "\n" .. _G.NORMAL_FONT_COLOR_CODE .. L["Key Stones:"] .. "|r " .. race.keystonesInInventory
+						child.crest.tooltip = race.name .. "\n" .. _G.NORMAL_FONT_COLOR_CODE .. L["Key Stones"] .. "|r " .. race.keystonesInInventory
 						child.crest.text:SetText(race.name)
 						child.icon.texture:SetTexture(project.icon)
 						child.icon.tooltip = _G.HIGHLIGHT_FONT_COLOR_CODE .. project.name .. "|r\n" .. _G.NORMAL_FONT_COLOR_CODE .. project.tooltip .. "\n\n" .. _G.HIGHLIGHT_FONT_COLOR_CODE .. L["Solved Count: %s"]:format(_G.NORMAL_FONT_COLOR_CODE .. project.completionCount .. "|r") .. "\n\n" .. _G.GREEN_FONT_COLOR_CODE .. L["Left-Click to open artifact in default Archaeology UI"] .. "|r"
@@ -771,17 +771,22 @@ end -- do-block
 -- ----------------------------------------------------------------------------
 -- Methods.
 -- ----------------------------------------------------------------------------
+
+local function GenerateTooltipString(string1, string2)
+	return NORMAL_FONT_COLOR:WrapTextInColorCode((string2 and string1 .. ": " or "") .. HIGHLIGHT_FONT_COLOR:WrapTextInColorCode(string2 or string1))
+end
+
 function Archy:ShowDigSiteChildFrameSiteButtonTooltip(siteButton)
 	local digsite = siteButton.digsite
 	local highlightFont = _G.HIGHLIGHT_FONT_COLOR_CODE
 	local normalFont = _G.NORMAL_FONT_COLOR_CODE
 
-	siteButton.tooltip = siteButton.name:GetText()
-	siteButton.tooltip = siteButton.tooltip .. ("\n%s%s: %s%s|r"):format(normalFont, _G.ZONE, highlightFont, digsite.zoneName)
-	siteButton.tooltip = siteButton.tooltip .. ("\n\n%s%s %s%s|r"):format(normalFont, L["Surveys:"], highlightFont, digsite.stats.surveys)
-	siteButton.tooltip = siteButton.tooltip .. ("\n%s%s: %s%s|r"):format(normalFont, L["Digs"], highlightFont, digsite.stats.looted)
-	siteButton.tooltip = siteButton.tooltip .. ("\n%s%s: %s%s|r"):format(normalFont, _G.ARCHAEOLOGY_RUNE_STONES, highlightFont, digsite.stats.fragments)
-	siteButton.tooltip = siteButton.tooltip .. ("\n%s%s %s%s|r"):format(normalFont, L["Key Stones:"], highlightFont, digsite.stats.keystones)
+	siteButton.tooltip = GenerateTooltipString(siteButton.name:GetText())
+	siteButton.tooltip = siteButton.tooltip .. "\n".. GenerateTooltipString(_G.ZONE, digsite.zoneName)
+	siteButton.tooltip = siteButton.tooltip .. "\n".. GenerateTooltipString(L["Surveys"], digsite.stats.surveys)
+	siteButton.tooltip = siteButton.tooltip .. "\n".. GenerateTooltipString(L["Digs"], digsite.stats.looted)
+	siteButton.tooltip = siteButton.tooltip .. "\n".. GenerateTooltipString(_G.ARCHAEOLOGY_RUNE_STONES, digsite.stats.fragments)
+	siteButton.tooltip = siteButton.tooltip .. "\n".. GenerateTooltipString(L["Key Stones"], digsite.stats.keystones)
 	siteButton.tooltip = siteButton.tooltip .. "\n\n" .. _G.GREEN_FONT_COLOR_CODE .. L["Left-Click to view the zone map"]
 
 	local raceIsBlacklisted = siteButton.digsite.race:IsOnDigSiteBlacklist()
