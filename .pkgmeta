@@ -50,5 +50,5 @@ externals:
   Libs/LibToast-1.0:
     url: https://repos.wowace.com/wow/libtoast-1-0
 
-plain-copy:
+license-output:
   - LICENSE.txt
