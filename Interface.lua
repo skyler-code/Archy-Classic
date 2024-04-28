@@ -167,7 +167,7 @@ do
 
 					if isGraphicalTheme then
 						child.crest.texture:SetTexture(race.texture)
-						child.crest.tooltip = race.name .. "\n" .. _G.NORMAL_FONT_COLOR_CODE .. L["Key Stones"] .. "|r " .. race.keystonesInInventory
+						child.crest.tooltip = race.name .. "\n" .. _G.NORMAL_FONT_COLOR:WrapTextInColorCode(L["Key Stones"]..": ") .. race.keystonesInInventory
 						child.crest.text:SetText(race.name)
 						child.icon.texture:SetTexture(project.icon)
 						child.icon.tooltip = _G.HIGHLIGHT_FONT_COLOR_CODE .. project.name .. "|r\n" .. _G.NORMAL_FONT_COLOR_CODE .. project.tooltip .. "\n\n" .. _G.HIGHLIGHT_FONT_COLOR_CODE .. L["Solved Count: %s"]:format(_G.NORMAL_FONT_COLOR_CODE .. project.completionCount .. "|r") .. "\n\n" .. _G.GREEN_FONT_COLOR_CODE .. L["Left-Click to open artifact in default Archaeology UI"] .. "|r"
@@ -993,7 +993,7 @@ function Archy:RefreshDigSiteDisplay()
 
 			local race = digsite.race
 			childFrame.crest.icon:SetTexture(race.texture)
-			childFrame.crest.tooltip = race.name
+			childFrame.crest.tooltip = HIGHLIGHT_FONT_COLOR:WrapTextInColorCode(race.name)
 		end
 
 		childFrame:Show()
