@@ -148,7 +148,8 @@ local function _RefreshDialogAnchors()
         current_dialog:ClearAllPoints()
 
         if index == 1 then
-            local default_dialog = _G.StaticPopup_DisplayedFrames[#_G.StaticPopup_DisplayedFrames]
+
+            local default_dialog
 
             if default_dialog then
                 current_dialog:SetPoint("TOP", default_dialog, "BOTTOM", 0, 0)
@@ -273,7 +274,7 @@ local function _Dialog_OnUpdate(dialog, elapsed)
             if delegate and delegate.on_cancel then
                 delegate.on_cancel(dialog, dialog.data, "timeout")
             end
-            dialog:Hide()
+            StaticPopupSpecial_Hide(dialog)
             return
         end
         dialog.time_remaining = remaining
@@ -331,7 +332,7 @@ if not lib.hooked_escape_pressed then
             if delegate.on_cancel and not delegate.no_cancel_on_escape then
                 delegate.on_cancel(dialog)
             end
-            dialog:Hide()
+            StaticPopupSpecial_Hide(dialog)
         end
 
         if #delegate_queue > 0 then
@@ -509,7 +510,7 @@ local function Button_OnClick(button, mouse_button, down)
     end
 
     if hide then
-        dialog:Hide()
+        StaticPopupSpecial_Hide(dialog)
     end
 end
 
@@ -774,7 +775,7 @@ function lib:Spawn(reference, data)
                 if dialog.delegate.on_cancel then
                     dialog.delegate.on_cancel(dialog, dialog.data, "override")
                 end
-                dialog:Hide()
+                StaticPopupSpecial_Hide(dialog)
             end
         end
     end
@@ -790,7 +791,7 @@ function lib:Spawn(reference, data)
                     local dialog = active_dialogs[index]
 
                     if dialog.delegate == delegate_to_cancel then
-                        dialog:Hide()
+                        StaticPopupSpecial_Hide(dialog)
 
                         if dialog.delegate.on_cancel then
                             dialog.delegate.on_cancel(dialog, dialog.data, "override")
@@ -810,7 +811,7 @@ function lib:Spawn(reference, data)
         if not delegate.no_cancel_on_reuse and delegate.on_cancel then
             delegate.on_cancel(dialog, dialog.data, "override")
         end
-        dialog:Hide()
+        StaticPopupSpecial_Hide(dialog)
     end
 
     -----------------------------------------------------------------------
@@ -874,7 +875,7 @@ function lib:Dismiss(reference, data)
         local dialog = active_dialogs[index]
 
         if dialog.delegate == delegate and (not data or dialog.data == data) then
-            dialog:Hide()
+            StaticPopupSpecial_Hide(dialog)
         end
     end
 end
