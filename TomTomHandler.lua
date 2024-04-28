@@ -46,6 +46,7 @@ local TomTomHandler = {
 		self.waypoint = _G.TomTom:AddWaypoint(digsite.UIMapID, digsite.coordX, digsite.coordY, {
 			crazy = private.ProfileSettings.tomtom.crazyArrowEnabled,
 			title = ("%s %s\n%s"):format(digsite.name, _G.PARENS_TEMPLATE:format(digsite.race.name), digsite.zoneName),
+			from = FOLDER_NAME
 		})
 	end
 }
