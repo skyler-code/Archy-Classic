@@ -708,12 +708,10 @@ do
 
 					if child.fragmentBar then
 						child.fragmentBar:SetScript("OnEnter", function(self)
-							local color = _G.HIGHLIGHT_FONT_COLOR
 							local race = private.Races[self:GetParent():GetID()]
-							local tooltip = _G.GameTooltip
-							tooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT")
-							tooltip:AddLine(_G.ARCHAEOLOGY_POJECTBAR_TOOLTIP:format(race.maxFragments), color.r, color.g, color.b, 1)
-							tooltip:Show()
+							GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT")
+							GameTooltip:AddLine(_G.ARCHAEOLOGY_POJECTBAR_TOOLTIP:format(race.maxFragments), HIGHLIGHT_FONT_COLOR:GetRGBA())
+							GameTooltip:Show()
 						end)
 					end
 
