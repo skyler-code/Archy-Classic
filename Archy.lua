@@ -882,7 +882,6 @@ function Archy:OnEnable()
 	self:RegisterEvent("ARCHAEOLOGY_SURVEY_CAST")
 	self:RegisterEvent("BAG_UPDATE_DELAYED")
 	self:RegisterEvent("CHAT_MSG_LOOT")
-	self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 	self:RegisterEvent("CURRENCY_DISPLAY_UPDATE")
 	self:RegisterEvent("LOOT_OPENED")
 	self:RegisterEvent("PET_BATTLE_CLOSE")
@@ -905,7 +904,10 @@ function Archy:OnEnable()
 	self:RegisterEvent("UNIT_SPELLCAST_FAILED", "UNIT_SPELLCAST_SUCCEEDED")
 	self:RegisterEvent("UNIT_SPELLCAST_INTERRUPTED", "UNIT_SPELLCAST_SUCCEEDED")
 	self:RegisterEvent("UNIT_SPELLCAST_STOP", "UNIT_SPELLCAST_SUCCEEDED")
+	
+	--self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 	--self:RegisterEvent("UNIT_SPELLCAST_SENT")
+
     self:RESEARCH_ARTIFACT_HISTORY_READY()
 
 	self:SKILL_LINES_CHANGED()
