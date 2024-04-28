@@ -1078,6 +1078,8 @@ local function GetDigSiteOptions()
 							order = 2.2,
 							type = "toggle",
 							name = L["Show Crate Button"],
+							disabled = true,
+							hidden = true,
 							desc = L["Shows a Crate button with the Distance Indicator."],
 							get = function() return digsiteSettings.distanceIndicator.showCrateButton end,
 							set = function(_, value)
@@ -1088,6 +1090,8 @@ local function GetDigSiteOptions()
 						showLorItemButton = {
 							order = 2.3,
 							type = "toggle",
+							disabled = true,
+							hidden = true,
 							name = L["Show Lorewalker Items Button"],
 							desc = L["Shows Lorewalker Items with the Distance Indicator."],
 							get = function() return digsiteSettings.distanceIndicator.showLorItemButton end,
