@@ -266,20 +266,20 @@
                     <Attribute name="spell" value="80451"/>
                 </Attributes>
                 <Size>
-                    <AbsDimension x="28" y="24"/>
+                    <AbsDimension x="36" y="36"/>
                 </Size>
                 <Anchors>
-                    <Anchor point="LEFT" relativeTo="$parentCircle" relativePoint="RIGHT" x="5" y="0"/>
+                    <Anchor point="LEFT" relativeTo="$parentCircle" relativePoint="RIGHT" x="5" y="10"/>
                 </Anchors>
                 <Frames>
                     <Cooldown name="$parentCooldown" inherits="CooldownFrameTemplate" parentKey="cooldown">
                         <Size>
-                            <AbsDimension x="28" y="24"/>
+                            <AbsDimension x="36" y="36"/>
                         </Size>
                         <Anchors>
                             <Anchor point="CENTER">
                                 <Offset>
-                                    <AbsDimension x="0" y="-1"/>
+                                    <AbsDimension x="0" y="0"/>
                                 </Offset>
                             </Anchor>
                         </Anchors>
