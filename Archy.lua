@@ -1333,6 +1333,7 @@ function Archy:UpdatePlayerPosition(force)
 		race:UpdateCurrentProject()
 	end
 
+	ArtifactFrame:RefreshDisplay()
 	ArtifactFrame:UpdateChrome()
 	ArtifactFrame:RefreshDisplay()
 
