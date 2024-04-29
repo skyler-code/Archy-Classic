@@ -942,7 +942,8 @@ local function GetDigSiteOptions()
 						},
    						waypointNearest = {
 							order = 6,
-							disabled = function() return (not digsiteSettings.announceNearest) end,
+							disabled = not C_Map.GetUserWaypoint or function() return (not digsiteSettings.announceNearest) end,
+							hidden = not C_Map.GetUserWaypoint,
 							type = "toggle",
 							width = "double",
 							name = L["Waypoint Nearest Dig Site"],
