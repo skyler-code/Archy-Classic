@@ -1,0 +1,69 @@
+## Interface: 40400
+## Title: Archy-Classic - Archaeology Assistant
+## Title-zhCN: Archy-Classic - 考古学助手
+## Title-zhTW: Archy-Classic - 考古學助手
+## Version: @project-version@
+## Notes: Archaeology assistant
+## Notes-zhCN: 考古学助手
+## Notes-zhTW: 考古學助手
+## Author: Torhal, javier_himura, Brues
+## X-Credits: daihenka, Dridzt
+## X-Category: Archaeology
+## SavedVariables: ArchyDB, TargetLogData, MissingDigsites
+## OptionalDeps: Ace3, AceGUI-3.0-SharedMediaWidgets, HereBeDragons-2.0, LibAboutPanel-2.0, LibDBIcon-1.0, LibDialog-1.0, LibQTip-1.0, LibSharedMedia-3.0, LibSink-2.0, LibTextDump-1.0, LibToast-1.0, TomTom
+
+#@no-lib-strip@
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+Libs\AceAddon-3.0\AceAddon-3.0.xml
+Libs\AceConsole-3.0\AceConsole-3.0.xml
+Libs\AceGUI-3.0\AceGUI-3.0.xml
+Libs\AceConfig-3.0\AceConfig-3.0.xml
+Libs\AceDB-3.0\AceDB-3.0.xml
+Libs\AceDBOptions-3.0\AceDBOptions-3.0.xml
+Libs\AceEvent-3.0\AceEvent-3.0.xml
+Libs\AceHook-3.0\AceHook-3.0.xml
+Libs\AceLocale-3.0\AceLocale-3.0.xml
+Libs\AceTimer-3.0\AceTimer-3.0.xml
+Libs\AceBucket-3.0\AceBucket-3.0.xml
+Libs\LibSink-2.0\LibSink-2.0\lib.xml
+Libs\LibSharedMedia-3.0\lib.xml
+Libs\AceGUI-3.0-SharedMediaWidgets\widget.xml
+Libs\LibAboutPanel-2.0\lib.xml
+Libs\LibQTip-1.0\lib.xml
+Libs\LibDialog-1.0\lib.xml
+Libs\LibToast-1.0\lib.xml
+Libs\LibTextDump-1.0\lib.xml
+Libs\HereBeDragons\HereBeDragons-2.0.lua
+Libs\HereBeDragons\HereBeDragons-Migrate.lua
+Libs\HereBeDragons\HereBeDragons-Pins-2.0.lua
+Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+Libs\LibDBIcon-1.0\LibDBIcon-1.0\LibDBIcon-1.0.lua
+#@end-no-lib-strip@
+
+Locale\enUS.lua
+Locale\esES.lua
+Locale\esMX.lua
+Locale\deDE.lua
+Locale\frFR.lua
+Locale\itIT.lua
+Locale\koKR.lua
+Locale\ruRU.lua
+Locale\ptBR.lua
+Locale\zhCN.lua
+Locale\zhTW.lua
+
+## Must be loaded first.
+Constants.lua
+
+Archy.lua
+Interface.xml
+Interface.lua
+Digsite.lua
+Race.lua
+Tooltip.lua
+Config.lua
+TomTomHandler.lua
+WaypoingHandler.lua
+Database\Digsites.lua
+Database\Artifacts.lua
