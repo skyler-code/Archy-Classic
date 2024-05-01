@@ -461,7 +461,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["1415:0.550131:0.336812"] = {
 			siteID = 221, -- Infectis Scar Fossil Field
-			mapID = 1415, -- Eastern Plaguelands
+			mapID = 1423, -- Eastern Plaguelands
 			raceID = RaceID.ArchRaceFossil,
 		},
 		["1415:0.541343:0.620130"] = {
@@ -506,7 +506,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["1415:0.538079:0.298359"] = {
 			siteID = 617, -- Plaguewood Digsite
-			mapID = 1415, -- Eastern Plaguelands
+			mapID = 1423, -- Eastern Plaguelands
 			raceID = RaceID.ArchRaceNerubian,
 		},
 		["1415:0.475980:0.660978"] = {
@@ -516,7 +516,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["1415:0.549026:0.288929"] = {
 			siteID = 219, -- Quel'Lithien Lodge Digsite
-			mapID = 1415, -- Eastern Plaguelands
+			mapID = 1423, -- Eastern Plaguelands
 			raceID = RaceID.ArchRaceNightElf,
 		},
 		["1415:0.532311:0.872840"] = {
@@ -561,7 +561,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["1415:0.516013:0.297438"] = {
 			siteID = 615, -- Terrorweb Tunnel Digsite
-			mapID = 1415, -- Eastern Plaguelands
+			mapID = 1423, -- Eastern Plaguelands
 			raceID = RaceID.ArchRaceNerubian,
 		},
 		["1415:0.506735:0.502891"] = {
@@ -631,7 +631,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["1415:0.566404:0.287382"] = {
 			siteID = 217, -- Zul'Mashar Digsite
-			mapID = 1415, -- Eastern Plaguelands
+			mapID = 1423, -- Eastern Plaguelands
 			raceID = RaceID.ArchRaceTroll,
 		},
 		["1415:0.457301:0.878770"] = {
