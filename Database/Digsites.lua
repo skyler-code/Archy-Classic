@@ -850,7 +850,7 @@ function private.InitializeDigsiteTemplates()
 			mapID = 115, -- Dragonblight
 			raceID = RaceID.ArchRaceNightElf,
 		},
-		["113:0.830704:0.815545"] = {
+		["113:0.829115:0.817147"] = {
 			siteID = 441, -- Nifflevar Digsite
 			mapID = 117, -- Howling Fjord
 			raceID = RaceID.ArchRaceVrykul,
