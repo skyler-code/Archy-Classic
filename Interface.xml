@@ -288,6 +288,7 @@
                 <Scripts>
                     <OnLoad>
                         self.icon:SetTexture("Interface\\Icons\\inv_misc_shovel_01")
+                        self:RegisterForDrag("LeftButton")
                     </OnLoad>
                     <OnEnter>
                         GameTooltip:SetOwner(self,"ANCHOR_TOP")
@@ -296,6 +297,7 @@
                     </OnEnter>
                     <OnLeave>GameTooltip_Hide()</OnLeave>
                     <OnHide>GameTooltip_Hide()</OnHide>
+                    <OnDragStart>PickupSpell(80451)</OnDragStart>
                 </Scripts>
             </Button>
             <Button name="$parentCrateButton" parentKey="crateButton" inherits="ActionButtonTemplate, SecureActionButtonTemplate">
