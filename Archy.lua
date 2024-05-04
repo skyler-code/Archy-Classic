@@ -29,6 +29,11 @@ local HereBeDragons = LibStub("HereBeDragons-2.0")
 local L = LibStub("AceLocale-3.0"):GetLocale("Archy", false)
 local LDBI = LibStub("LibDBIcon-1.0")
 
+local gprint = print
+local function print(...)
+    gprint("|cff33ff99"..FOLDER_NAME.."|r:",...)
+end
+
 --local DatamineTooltip = _G.CreateFrame("GameTooltip", "ArchyScanTip", nil, "GameTooltipTemplate")
 --DatamineTooltip:SetOwner(_G.UIParent, "ANCHOR_NONE")
 
@@ -719,7 +724,7 @@ function Archy:OnInitialize()
 		blacklist = {}
 	}
 
-	setmetatable(self.db.char.digsites.stats, {
+	self.db.char.digsites.stats = setmetatable(self.db.char.digsites.stats or {}, {
 		__index = function(t, k)
 			if k then
 				t[k] = {
@@ -731,6 +736,13 @@ function Archy:OnInitialize()
 				}
 				return t[k]
 			end
+		end
+	})
+
+	self.db.char.solveHistory = setmetatable(self.db.char.solveHistory or {}, {
+		__index = function(t, k)
+			t[k] = {}
+			return t[k]
 		end
 	})
 
@@ -1065,6 +1077,31 @@ local SUBCOMMAND_FUNCS = {
 
 		debugger:Display()
 	end,
+	solvehistory = function()
+		for raceID = 1, ARCHAEOLOGY_MAX_RACES do
+			for y = 1, (GetNumArtifactsByRace(raceID) or 0) do
+				local name, _, _, _, _, _, _, _, _, count = GetArtifactInfoByRace(raceID, y)
+				if Archy.db.char.solveHistory[raceID][name] and Archy.db.char.solveHistory[raceID][name] > (count or 0) then
+					count = Archy.db.char.solveHistory[raceID][name]
+				end
+				Archy.db.char.solveHistory[raceID][name] = count
+			end
+		end
+		
+		local totalSolves = 0
+		for raceID, items in pairs(Archy.db.char.solveHistory) do
+			local raceTotal = 0
+			for itemName, count in pairs(items) do
+				raceTotal = raceTotal + count
+			end
+			if raceTotal > 0 then
+				local rn = GetArchaeologyRaceInfo(raceID)
+				print(rn..":", raceTotal)
+			end
+			totalSolves = totalSolves + raceTotal
+		end
+		print("Total artifacts:", totalSolves);
+	end
 }
 
 _G["SLASH_ARCHY1"] = "/archy"

@@ -211,14 +211,18 @@ function Race:GetArtifactCompletionCountByName(targetArtifactName)
 		return 0
 	end
 
-	for artifactIndex = 1, _G.GetNumArtifactsByRace(self.ID) do
-		local artifactName, _, _, _, _, _, _, _, _, completionCount = _G.GetArtifactInfoByRace(self.ID, artifactIndex)
-		if artifactName == targetArtifactName then
-			return completionCount or 0
+	for y = 1, (GetNumArtifactsByRace(self.ID) or 0) do
+		local name, _, _, _, _, _, _, _, _, count = GetArtifactInfoByRace(self.ID, y)
+		if name == targetArtifactName then
+			if Archy.db.char.solveHistory[self.ID][name] and Archy.db.char.solveHistory[self.ID][name] > (count or 0) then
+				count = Archy.db.char.solveHistory[self.ID][name]
+			end
+			Archy.db.char.solveHistory[self.ID][name] = count
+			break
 		end
 	end
 
-	return 0
+	return Archy.db.char.solveHistory[self.ID][targetArtifactName] or 0
 end
 
 function Race:IsOnArtifactBlacklist()
