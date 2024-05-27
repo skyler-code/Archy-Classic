@@ -177,7 +177,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["1414:0.415888:0.647527"] = {
 			siteID = 285, -- Oneiros Digsite
-			mapID = 1412, -- Mulgore
+			mapID = 1444, -- Feralas
 			raceID = RaceID.ArchRaceNightElf,
 		},
 		["1414:0.464801:0.918425"] = {
@@ -327,7 +327,7 @@ function private.InitializeDigsiteTemplates()
 		},
 		["1414:0.482573:0.840286"] = {
 			siteID = 331, -- Terror Run Fossil Field
-			mapID = 1446, -- Tanaris
+			mapID = 1449, -- Un'Goro Crater
 			raceID = RaceID.ArchRaceFossil,
 		},
 		["1414:0.523063:0.924376"] = {
