@@ -40,3 +40,4 @@ luac.out
 *.hex
 
 Publish.bat
+.vscode/settings.json
